@@ -2,11 +2,21 @@
 
 img {
     position: relative;
-    top: 580px;
-    left: 410px; 
+    top: 560px;
+    left: 470px; 
 }
 
-
+#button {
+	position: relative;
+	top: 476px;
+	left: 472px;
+	}
+	
+#no {
+	position: relative;
+	top: 500px;
+	left: 407px;
+	}
 	
 	
 	

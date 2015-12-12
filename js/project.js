@@ -7,17 +7,49 @@ var player = '<img src=' + batter + ' alt="Player Icon" height="220" id="icon">'
 
 $('#field').append(player);
 
-$('#icon').click (function() {
-  if ( $(this).position().left < 810 ) {
-        $(this).animate( { left: "550", top: "410" }, 'slow' );
-    } else {
-    }
-});
+
+
+var outcomes = new Array();
+outcomes[0-0.4] = "single";
+outcomes[0.41-0.6] = "double";
+outcomes[0.61-0.85] = "triple";
+outcomes[0.86-1] = "homerun";
+
+
 
 function number(){
  	var number= Math.random();
         document.getElementById("no").value= number;
-    }
+	if (number < 0.3) {
+	alert("You ripped a line-drive single! Stroll to first.")
+	$('img').animate( { left: "610", top: "380" }, 'slow' );
+	} else 
+	if (number >= 0.3 && number < 0.55) {
+	alert("Scorcher in the gap! Trot into second for a double!")
+	$('img').animate( { left: "610", top: "380" }, 'slow' );
+	$('img').animate( { left: "440", top: "200" }, 'slow' );
+	} else 
+	if (number >= 0.55 && number < 0.80) {
+	alert("Ripped down the line! That's a triple!")
+	$('img').animate( { left: "610", top: "380" }, 'slow' );
+	$('img').animate( { left: "440", top: "200" }, 'slow' );
+	$('img').animate( { left: "270", top: "380" }, 'slow' );
+	} else 
+	if (number < 1) {
+	alert("That's a dinger! Home run!")
+	$('img').animate( { left: "610", top: "380" }, 'slow' );
+	$('img').animate( { left: "440", top: "200" }, 'slow' );
+	$('img').animate( { left: "270", top: "380" }, 'slow' );
+	$('img').animate( {left: "440", top: "540" }, 'slow' );
+	} else {
+	}
+	}
+
+
+    
+    
+
+
 
 
 
