@@ -20,27 +20,41 @@ outcomes[0.86-1] = "homerun";
 function number(){
  	var number= Math.random();
         document.getElementById("no").value= number;
-	if (number < 0.3) {
-	alert("You ripped a line-drive single! Stroll to first.")
+	if (number < 0.2) {
+	alert("You ripped a line-drive single! Stroll to first.");
 	$('img').animate( { left: "610", top: "380" }, 'slow' );
 	} else 
-	if (number >= 0.3 && number < 0.55) {
-	alert("Scorcher in the gap! Trot into second for a double!")
+	if (number >= 0.2 && number < 0.3) {
+	alert("Scorcher in the gap! Trot into second for a double!");
 	$('img').animate( { left: "610", top: "380" }, 'slow' );
 	$('img').animate( { left: "440", top: "200" }, 'slow' );
 	} else 
-	if (number >= 0.55 && number < 0.80) {
-	alert("Ripped down the line! That's a triple!")
+	if (number >= 0.3 && number < 0.4) {
+	alert("Ripped down the line! That's a triple!");
 	$('img').animate( { left: "610", top: "380" }, 'slow' );
 	$('img').animate( { left: "440", top: "200" }, 'slow' );
 	$('img').animate( { left: "270", top: "380" }, 'slow' );
 	} else 
-	if (number < 1) {
-	alert("That's a dinger! Home run!")
+	if (number >= 0.4 && number < 0.5) {
+	alert("That's a dinger! Home run!");
 	$('img').animate( { left: "610", top: "380" }, 'slow' );
 	$('img').animate( { left: "440", top: "200" }, 'slow' );
 	$('img').animate( { left: "270", top: "380" }, 'slow' );
 	$('img').animate( {left: "440", top: "540" }, 'slow' );
+	} else 
+	if (number >= 0.5 && number < 0.7) {
+	alert("You grounded out. Back to the dugout!");
+	$('img').animate( { left: "610", top: "380" }, 'slow' );
+	$('img').animate( { left: "596", top: "590" }, 'slow' );
+	} else
+	if (number >= 0.7 && number < 0.9) {
+	alert("You flew out. Back to the dugout!");
+	$('img').animate( { left: "610", top: "380" }, 'slow' );
+	$('img').animate( { left: "596", top: "590" }, 'slow' );
+	} else
+	if (number < 1) {
+	alert("You walked! Take your base.");
+	$('img').animate( { left: "610", top: "380" }, 'slow' );
 	} else {
 	}
 	}
